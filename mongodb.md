@@ -21,11 +21,6 @@
   ```
   关系型数据库：数据库，数据表，数据行
   非关系型数据库：数据库，集合，文件
-  |
-  |
-  |
-  |
-  |
   ```
 
   ​
@@ -49,9 +44,15 @@
   - db.testUpdate.update({name:'lyc'},{$inc:{age:-99}})在当前情况下计算数学
   - db.testUpdate.update({},{$set:{interest:[]}},{multi:true}) 空对象代表查找全部，mylti是否继续向下查找，
   - db.testUpdate.update({name:'xiaowang'},{$set:{sex:0,age:999,interest:[]}},{upsert:true})，找不到的情况自动添加
+  - 以上两种可以直接简写为db.testUpdate.update({name:'xiaowang'},{$set:{sex:0,age:999,interest:[]}},true,true)第一个true为upsert，第二个true为multi
   - db.testUpdate.update({name:'xiaowang}',{$push:{interest:'draw'}}) //在数组interest中插入draw
   - db.testUpdate.update({name:'xiaowang', interest:{$ne:'Game'}},{$push:{interest:'playGame'}}) ,$ne先判断是否有该元素，没有则进入push
   - db.testUpdate.update({name:'xiaowang'},{$addToSet:{interest:'readBook'}})  addToSet功能一致
   - $each拆分数组
   - $pop 为1时从末端进行删除，-1时从开始位置进行删除
   - db.testUpdate.update({name:'xiaowang'},{$set:{"interest.2":"code"}})
+- 安全应答式操作数据库
+  - db.runCommand({getLastError:1})
+  - db.listCommands //列出所有应答式功能
+  - db.runCommand({ping:1}) // ok=1代表链接数据库成功
+  - findAndModify
