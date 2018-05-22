@@ -1,0 +1,22 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "find.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eeeeeeeason/mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eeeeeeeason/mongo/issues"
+  },
+  "homepage": "https://github.com/eeeeeeeason/mongo#readme",
+  "devDependencies": {
+    "mockjs": "^1.0.1-beta3"
+  }
+}

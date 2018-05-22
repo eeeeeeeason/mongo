@@ -55,4 +55,3 @@
   - db.runCommand({getLastError:1})
   - db.listCommands //列出所有应答式功能
   - db.runCommand({ping:1}) // ok=1代表链接数据库成功
-  - findAndModify

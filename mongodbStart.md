@@ -1,0 +1,1 @@
+- Windows已经包含用于Kerberos身份验证的SSPI API。但是，您需要使用Visual Studio C ++安装完整的编译器工具链才能正确安装Kerberos扩展。
